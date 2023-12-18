@@ -2,19 +2,6 @@
 Atliq Grands noticed a loss in their market share and revenue over a few months. To understand the cause of this loss, they needed a way to analyze this. I created a dashboard in Power BI using 3 months of data.
 • With the dashboard, the Revenue team of Atliq Grands was able to gain insights into their revenue trend. This could help in regaining their revenue and market share by 20 percent in the next month, performance, and leaves.
 • The dashboard streamlined HR processes and increased efficiency.
-				
-**Calculated Columns**				
-
-1. wn	"To get the week number from the corresponding date. 
-wn = WEEKNUM(dim_date[date])	dim_date
-
-3. Day type	"Based on the feedback from stakeholder, we considered 
-Friday and Saturday as weekend and weekdays from Sunday to Thurdsay. In PowerBI, Sunday weekday number is 1, Monday is 2 and so on. So, if weekday number is greater than 5, then weekend or else weekday.
-day type = 
- Var wkd = WEEKDAY(dim_date[date],1)
- return
- IF(
- wkd>5,""Weekend"",""Weekday"")"	dim_date
 		
 **Measures**		
 
